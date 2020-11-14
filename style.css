@@ -19,6 +19,22 @@ body {
 p {
   margin-bottom: 1.2rem;
 }
+.searchHistory {
+    margin-bottom: 0.5rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0.8rem;
+    font-size: 1.5rem;
+}
+.pForForecast {
+    font-size: 0.9rem;
+}
+.days {
+    background-color: rgb(7, 82, 180);
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+}
 
 #cityInfo {
   margin-left: 2rem;
@@ -28,6 +44,18 @@ p {
 #cityForecast,
 #forecast {
   margin-left: 5rem;
+}
+.green{
+    background-color: green;
+}
+.yellow {
+    background-color: yellow;
+}
+.orange {
+    background-color: orange;
+}
+.red {
+    background-color: red;
 }
 #cityForecast {
   display: flex;
