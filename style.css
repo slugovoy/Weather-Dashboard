@@ -1,0 +1,38 @@
+body {
+  background-image: url(images/background.jpg);
+  background-color: rgb(218, 212, 212);
+}
+.col-md-4 {
+  margin-left: -3.5rem;
+}
+#citiesNames,
+#cityInfo,
+#cityForecast {
+  width: 100%;
+  border: 1px solid black;
+  margin-top: 1rem;
+  border-radius: 4px;
+  background-color: white;
+  opacity: 0.8;
+  padding: 0.8rem;
+}
+p {
+  margin-bottom: 1.2rem;
+}
+
+#cityInfo {
+  margin-left: 2rem;
+  padding: 2.5rem;
+}
+#cityInfo,
+#cityForecast,
+#forecast {
+  margin-left: 5rem;
+}
+#cityForecast {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
