@@ -1,14 +1,19 @@
+$(document).ready(function(){
 let currentDate = luxon.DateTime.local().toFormat("D");
 function buildURL() {
   let queryURL = "https://api.openweathermap.org/data/2.5/weather?";
   let queryParams = { appid: "b822a69b22827a30f03ca2082b6ba3a1" };
 
-  queryParams.q = $("#searchCity").val().trim();
+  queryParams.q = lastCitySearch || $("#searchCity").val().trim();
+  var citySearch = $("#searchCity").val().trim();
+  history.push(citySearch);
+  window.localStorage.setItem("history", JSON.stringify(history));
+
   if ($("#searchCity").val() === "") return;
 
   return queryURL + $.param(queryParams);
 }
-//let currentDate = luxon.DateTime.local().toFormat("D");
+
 $("#startSearch").on("click", function (e) {
   e.preventDefault();
 
@@ -24,7 +29,20 @@ $("#startSearch").on("click", function (e) {
     url: queryURL,
     method: "GET",
   }).then(function (data) {
-    let city = $("<h3>").text(data.name + "(" + currentDate + ")");
+      let conditionMain = data.weather[0].main;
+
+      console.log(conditionMain);
+      let city = $("<h3>").text(data.name + "(" + currentDate + ")");
+      let sunIcon = $("<i>").attr("class", "fas fa-sun");
+      let cloudsIcon = $("<i>").attr("class", "fas fa-cloud");
+      let rainIcon = $("<i>").attr("class", "fas fa-cloud-showers-heavy");
+      if (conditionMain == "Clear"){
+          city.append(sunIcon);
+    }else if(conditionMain == "Rain"){
+        city.append(rainIcon);
+    } else if (conditionMain == "Clouds"){
+        city.append(cloudsIcon);
+    }
     let F = Math.floor((data.main.temp - 273.15) * 1.8 + 32);
     let tempNow = $("<p>").text("Temperature: " + F + " F");
     let humidNow = $("<p>").text("Humidity: " + data.main.humidity + " %");
@@ -32,6 +50,9 @@ $("#startSearch").on("click", function (e) {
     let indexUV = $("<p>").text("UV Index: ");
     $("#cityInfo").append(city, tempNow, humidNow, windSpeed);
     $("#citiesNames").append($("<h5>").attr("class", "searchHistory").text(data.name));
+
+// Local Storage
+    let historyEl = $(".searchHistory").val();
 
     // Second call
 
@@ -41,7 +62,6 @@ $("#startSearch").on("click", function (e) {
 
       querySecondParams.lat = data.coord.lat;
       querySecondParams.lon = data.coord.lon;
-      console.log(querySecondParams);
 
       return querySecondURL + $.param(querySecondParams);
     }
@@ -71,7 +91,7 @@ $("#startSearch").on("click", function (e) {
 
         $("#day" + [i]).append($("<h6>").text(currentDate + [i]));
         let condition = response.daily[i].weather[0].main;
-        //$("#day"+[i]).append($("<p>").attr("class", "pForForecast").text(condition));
+        
         if (condition == "Clear") {
           $("#day" + [i]).append($("<i>").attr("class", "fas fa-sun"));
         } else if (condition == "Rain") {
@@ -96,5 +116,23 @@ $("#startSearch").on("click", function (e) {
       }
       
     });
+ 
   });
 });
+
+var history = JSON.parse(window.localStorage.getItem("history")) || [];
+let lastCitySearch =  history.slice(-1)[0];
+console.log(lastCitySearch);
+
+function makeHistory() {
+    function makeRow(text) {
+        $("#citiesNames").append($("<h5>").attr("class", "searchHistory").text(text));
+    }
+    
+    for (let i = 0; i < history.length; i++) {
+        makeRow(history[i])
+    }
+}
+makeHistory();
+
+})
