@@ -1,66 +1,86 @@
 body {
-  background-image: url(images/background.jpg);
-  background-color: rgb(218, 212, 212);
-}
-.col-md-4 {
-  margin-left: -3.5rem;
-}
-#citiesNames,
-#cityInfo,
-#cityForecast {
-  width: 100%;
-  border: 1px solid black;
-  margin-top: 1rem;
-  border-radius: 4px;
-  background-color: white;
-  opacity: 0.8;
-  padding: 0.8rem;
-}
-p {
-  margin-bottom: 1.2rem;
-}
-.searchHistory {
-    margin-bottom: 0.5rem;
+    background-image: url(images/background.jpg);
+    background-color: rgb(218, 212, 212);
+  }
+  .col-md-4 {
+    margin-left: -3.5rem;
+  }
+  #citiesNames,
+  #cityInfo,
+  #cityForecast {
+    width: 100%;
     border: 1px solid black;
+    margin-top: 1rem;
     border-radius: 4px;
+    background-color: white;
+    opacity: 0.8;
     padding: 0.8rem;
-    font-size: 1.5rem;
-}
-.pForForecast {
-    font-size: 0.9rem;
-}
-.days {
-    background-color: rgb(7, 82, 180);
-    color: white;
-    border-radius: 4px;
-    text-align: center;
-}
-
-#cityInfo {
-  margin-left: 2rem;
-  padding: 2.5rem;
-}
-#cityInfo,
-#cityForecast,
-#forecast {
-  margin-left: 5rem;
-}
-.green{
-    background-color: green;
-}
-.yellow {
-    background-color: yellow;
-}
-.orange {
-    background-color: orange;
-}
-.red {
-    background-color: red;
-}
-#cityForecast {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3rem;
-}
+  }
+  p {
+    margin-bottom: 1.2rem;
+  }
+  .searchHistory {
+      margin-bottom: 0.5rem;
+      border: 1px solid black;
+      border-radius: 4px;
+      padding: 0.8rem;
+      font-size: 1.5rem;
+  }
+  .pForForecast {
+      font-size: 0.9rem;
+  }
+  .days {
+      background-color: rgb(7, 82, 180);
+      color: white;
+      border-radius: 4px;
+      text-align: center;
+  }
+  
+  #cityInfo {
+    margin-left: 2rem;
+    padding: 2.5rem;
+  }
+  #cityInfo,
+  #cityForecast,
+  #forecast {
+    margin-left: 5rem;
+  }
+  .cityName2 {
+      margin-bottom: 3rem;
+      text-decoration: underline;
+  }
+  .green{
+      background-color: green;
+      color: white;
+      font-size: 1.2rem;
+      border-radius: 4px;
+  }
+  .yellow {
+      background-color: yellow;
+      font-size: 1.2rem;
+      border-radius: 4px;
+  }
+  .orange {
+      background-color: orange;
+      font-size: 1.2rem;
+      border-radius: 4px;
+      color: blue;
+  }
+  .red {
+      background-color: red;
+      font-size: 1.2rem;
+      border-radius: 4px;
+      color: blue;
+  }
+  #forecast {
+      text-decoration: underline;
+      font-size: 2.1rem;
+    
+  }
+  #cityForecast {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+  }
