@@ -1,9 +1,9 @@
 body {
-    background-image: url(images/background.jpg);
+    background-image: url(images/backImg1.jpg);
     background-color: rgb(218, 212, 212);
   }
-  .col-md-4 {
-    margin-left: -3.5rem;
+  .searchZone{
+    width: 100%;
   }
   #citiesNames,
   #cityInfo,
@@ -13,11 +13,11 @@ body {
     margin-top: 1rem;
     border-radius: 4px;
     background-color: white;
-    opacity: 0.8;
-    padding: 0.8rem;
+    opacity: 0.85;
+    padding: 2rem;
   }
   p {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
   }
   .searchHistory {
       margin-bottom: 0.5rem;
@@ -30,23 +30,13 @@ body {
       font-size: 0.9rem;
   }
   .days {
-      background-color: rgb(7, 82, 180);
+      background-color: rgb(14, 36, 236);
       color: white;
       border-radius: 4px;
       text-align: center;
   }
-  
-  #cityInfo {
-    margin-left: 2rem;
-    padding: 2.5rem;
-  }
-  #cityInfo,
-  #cityForecast,
-  #forecast {
-    margin-left: 5rem;
-  }
   .cityName2 {
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
       text-decoration: underline;
   }
   .green{
@@ -75,12 +65,11 @@ body {
   #forecast {
       text-decoration: underline;
       font-size: 2.1rem;
-    
   }
   #cityForecast {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 3rem;
+    column-gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 1rem;
   }
