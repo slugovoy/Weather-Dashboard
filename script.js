@@ -31,6 +31,7 @@ $(document).ready(function () {
     //   And push city name to the local storage
       history.push(citySearch);
       window.localStorage.setItem("history", JSON.stringify(history));
+      $("#searchCity").val("");
     });
 
 //   Generate weather's data function
