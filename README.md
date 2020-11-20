@@ -7,26 +7,26 @@ The purpose of this application is to give  user weather information based on us
 
 ### Here is an example of page with some information based on user's input.
 
-![Exampl](images/weatherDashBoard.png)
+![Exampl](assets/images/weatherDashBoard.png)
 
 
 When user clicks on "Search" button, app will display the current weather conditions in that city, including temperature, humidity, UV index, and a picture representing whether it is clear, cloudy, raining, etc.
 
 
-![General info for the city](images/generalInfo.png)
+![General info for the city](assets/images/generalInfo.png)
 
 
 
  Also, a 5-day forecast for that city is displayed below the current conditions showing similar information.
 
 
- ![5-day Forecast](images/5DayForecast.png)
+ ![5-day Forecast](assets/images/5DayForecast.png)
 
 
  Every time a user searches for a city, app adds the name of the city underneath the search menu. 
  
  
- ![Search History](images/searchHistory.png)
+ ![Search History](assets/images/searchHistory.png)
  
  
  When the user clicks on the city's name in history box, a new search is executed for that location.
@@ -41,13 +41,13 @@ When user clicks on "Search" button, app will display the current weather condit
    And, when user  clicks the "Clear All" button, it clears the user's local storage and removes the city's names from search history.
 
 
-   ![Clear button](images/searchBox.png)
+   ![Clear button](assets/images/searchBox.png)
 
 
    Here you can see the block of code, that responsible for checking weather conditions in provided data and displaying icon according to it.
 
 
-   ![Code Example](images/codeExample.png)
+   ![Code Example](assets/images/codeExample.png)
 
    ## *Technologies, languages, frameworks been used:*
 
