@@ -1,3 +1,6 @@
+## Weather Dashboard Application
+
+
 If you want to look at deployed project, click this link  https://slugovoy.github.io/Weather-Dashboard/
 
 Otherwise you can read short guideline, presented below.
